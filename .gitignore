@@ -1,6 +1,7 @@
 # Data
-data
-!data/prep_data.py
+00_data
+!00_data/prep_data.py
+*.json
 
 # Idea
 .idea

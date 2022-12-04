@@ -13,7 +13,7 @@ random.seed(42)
 train_set = []
 test_set = []
 
-data = open('../data/News_Category_Dataset_v3.json', 'r').read()
+data = open('../00_data/News_Category_Dataset_v3.json', 'r').read()
 lines = data.split('\n')
 lines.pop()
 
@@ -48,7 +48,7 @@ def datacleaning(text):
 for line in lines:
     news = json.loads(line)
     item = {
-        'headline': news['headline'],#datacleaning(news['headline']),
+        'headline': datacleaning(news['headline']),
         'category': category_mapper[news['category']] #news['category']
     }
 

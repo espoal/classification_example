@@ -6,7 +6,7 @@ random.seed(42)
 model_file = open('model.json', 'r').read()
 model = dict(json.loads(model_file))
 
-test_file = open('../data/validation_set.json', 'r').read()
+test_file = open('../00_data/validation_set.json', 'r').read()
 test_set = test_file.split('\n')
 test_set.pop()
 

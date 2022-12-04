@@ -1,6 +1,6 @@
 import json
 
-train_set = open('../data/train_set.json', 'r').read()
+train_set = open('../00_data/train_set.json', 'r').read()
 
 
 
