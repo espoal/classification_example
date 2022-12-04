@@ -10,7 +10,7 @@ use_aggregations = True
 
 # Not really worth commenting, as it's from a tutorial
 # https://www.tensorflow.org/tutorials/keras/text_classification
-batch_size = 32
+batch_size = 64
 seed = 42
 
 path = '/tmp/classification/'
@@ -33,7 +33,8 @@ raw_val_ds = utils.text_dataset_from_directory(
 
 raw_test_ds = utils.text_dataset_from_directory(
     path + 'test/',
-    batch_size=batch_size
+    batch_size=batch_size,
+    seed=seed
 )
 
 VOCAB_SIZE = 10000

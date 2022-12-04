@@ -66,7 +66,7 @@ picked the binary model because it's cheaper than the others and has very
 good performance, at **55.53%**.
 
 As with the previous model using category aggregation gives a nice boost in accuracy,
-**at 69.92%**.
+**at 70.02%**.
 
 How to run:
 ```bash
