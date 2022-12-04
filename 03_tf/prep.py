@@ -8,7 +8,9 @@ from nltk.stem.wordnet import WordNetLemmatizer
 
 from category_mapper import category_mapper
 
-use_aggregations = False
+
+# Set to false if you don't want to use categories aggregations
+use_aggregations = True
 
 random.seed(42)
 
@@ -21,8 +23,8 @@ lines.pop()
 
 STOPWORDS = set(stopwords.words('english'))
 
+# Data cleaning functions copied from another notebook
 def datacleaning(text):
-
 
     whitespace = re.compile(r"\s+")
     user = re.compile(r"(?i)@[a-z0-9_]+")

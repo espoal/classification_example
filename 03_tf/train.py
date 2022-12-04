@@ -5,10 +5,11 @@ from tensorflow.keras import losses
 from tensorflow.keras import utils
 from tensorflow.keras.layers import TextVectorization
 
+# Set to false if you don't want to use categories aggregations
+use_aggregations = True
 
-use_aggregations = False
-
-
+# Not really worth commenting, as it's from a tutorial
+# https://www.tensorflow.org/tutorials/keras/text_classification
 batch_size = 32
 seed = 42
 

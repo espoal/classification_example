@@ -1,4 +1,5 @@
 
+# Simply map the original 42 categories to 12
 category_mapper = dict()
 
 category_mapper['U.S. NEWS'] = 'NEWS'

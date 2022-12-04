@@ -14,12 +14,15 @@ for line in lines:
     else:
         categories[news['category']] += 1
 
+# Normalize probabilities by average occurrence of the category
 partial = 0
 for category in categories:
     value = categories[category]
     categories[category] += partial
     partial += value
 
+
+# Make sure probabilities are between 0 and 1
 for category in categories:
     categories[category] /= partial
 

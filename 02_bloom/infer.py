@@ -2,6 +2,7 @@ import json
 
 from category_mapper import category_mapper
 
+# Set to false if you don't want to use categories aggregations
 use_aggregations = True
 
 model_file = open('model.json', 'r').read()
