@@ -3,13 +3,12 @@ import json
 from category_mapper import category_mapper
 
 train_set = open('../00_data/train_set.json', 'r').read()
-
-
 lines = train_set.split('\n')
 lines.pop()
 
 categories = dict()
 
+# Build the word dictionary
 for line in lines:
     news = json.loads(line)
     real_category = category_mapper[news['category']]

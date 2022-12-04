@@ -1,6 +1,4 @@
 # Data
-00_data
-!00_data/prep_data.py
 *.json
 
 # Idea
