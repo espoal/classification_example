@@ -6,6 +6,8 @@ from tensorflow.keras import utils
 from tensorflow.keras.layers import TextVectorization
 
 
+use_aggregations = False
+
 
 batch_size = 32
 seed = 42
@@ -46,8 +48,6 @@ MAX_SEQUENCE_LENGTH = 250
 train_text = raw_train_ds.map(lambda text, labels: text)
 binary_vectorize_layer.adapt(train_text)
 
-
-
 def binary_vectorize_text(text, label):
     text = tf.expand_dims(text, -1)
     return binary_vectorize_layer(text), label
@@ -68,7 +68,12 @@ binary_train_ds = configure_dataset(binary_train_ds)
 binary_val_ds = configure_dataset(binary_val_ds)
 binary_test_ds = configure_dataset(binary_test_ds)
 
-binary_model = tf.keras.Sequential([layers.Dense(12)])
+if use_aggregations:
+    labels_count = 12
+else:
+    labels_count = 42
+
+binary_model = tf.keras.Sequential([layers.Dense(labels_count)])
 
 binary_model.compile(
     loss=losses.SparseCategoricalCrossentropy(from_logits=True),

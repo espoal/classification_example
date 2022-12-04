@@ -2,7 +2,9 @@ import json
 
 from category_mapper import category_mapper
 
-train_set = open('../00_data/train_set.json', 'r').read()
+use_aggregations = True
+
+train_set = open('train_set.json', 'r').read()
 lines = train_set.split('\n')
 lines.pop()
 
@@ -11,7 +13,10 @@ categories = dict()
 # Build the word dictionary
 for line in lines:
     news = json.loads(line)
-    real_category = category_mapper[news['category']]
+    if use_aggregations:
+        real_category = category_mapper[news['category']]
+    else:
+        real_category = news['category']
     real_headline = news['headline']
 
     if real_category not in categories:

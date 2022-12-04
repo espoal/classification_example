@@ -8,6 +8,8 @@ from nltk.stem.wordnet import WordNetLemmatizer
 
 from category_mapper import category_mapper
 
+use_aggregations = False
+
 random.seed(42)
 
 train_set = []
@@ -47,9 +49,13 @@ def datacleaning(text):
 
 for line in lines:
     news = json.loads(line)
+    if use_aggregations:
+        real_category = category_mapper[news['category']]
+    else:
+        real_category = news['category']
     item = {
         'headline': datacleaning(news['headline']),
-        'category': category_mapper[news['category']] #news['category']
+        'category': real_category
     }
 
     rand = random.random()
