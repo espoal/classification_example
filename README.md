@@ -14,7 +14,7 @@ automated because the download requires a login.
 ## Step 1: Random model
 
 The first step was to create a random model, to have a baseline.
-The performance is quite bad, around 1e-3, which is not surprising
+The performance is quite bad, which is not surprising
 but still serves as a point of reference.
 
 The only optimization I did was to normalize the probabilities by
