@@ -95,7 +95,7 @@ I couldn't work on it as much as I wanted.
 ## Step 5: Google scholar
 
 Another I approach I investigated but didn't have time to implement was to
-reverse search the paper associated with the data on google scholar.
+reverse search the paper associated with the data on [google scholar](https://scholar.google.com/scholar?cites=13889413104801494058&as_sdt=2005&sciodt=0,5&hl=en).
 
 Here's a nice result:
 https://proceedings.neurips.cc/paper/2021/file/8493eeaccb772c0878f99d60a0bd2bb3-Paper.pdf
