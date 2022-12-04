@@ -46,7 +46,8 @@ categories = dict()
 for line in lines:
     news = json.loads(line)
     real_category = category_mapper[news['category']]
-    real_headline = datacleaning(news['headline']) #news['headline']
+    real_headline = news['headline']
+    #real_headline = datacleaning(news['headline']) #
 
     if real_category not in categories:
         categories[real_category] = dict()

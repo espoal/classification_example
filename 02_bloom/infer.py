@@ -1,11 +1,12 @@
 import json
+from train import datacleaning
 
 from category_mapper import category_mapper
 
 model_file = open('model.json', 'r').read()
 model = json.loads(model_file)
 
-test_file = open('../data/validation_set.json', 'r').read()
+test_file = open('../data/test_set.json', 'r').read()
 test_set = test_file.split('\n')
 test_set.pop()
 
